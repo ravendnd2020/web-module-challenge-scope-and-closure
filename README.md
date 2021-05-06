@@ -5,7 +5,6 @@ The module challenge is the afternoon project or assignment that students work t
 ## JavaScript Foundations
 
 ## Scope and Closures
-
 ## Objectives
 
 - Explain function scope
@@ -43,12 +42,13 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+it makes it possible for functions to have local variables.
+It changes a global variable to a local variable.
 2. Study the following code, then answer the questions below.
 
 ```js
 function personalDice(name){
   return function(){
-      // generate random number between 1 and 6
     const newRoll = Math.floor(Math.random() * 6);
     console.log(`${name} rolled a ${newRoll}`)
   }
@@ -64,8 +64,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+where the variable newRoll is created. Its inside of the funciton
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+the random number is what changes everything else stays the same
 c. What is the lexical scope of `newRoll`? 
+it is local to the function only.
 
 
 ### Task 3 - Stretch Goals
